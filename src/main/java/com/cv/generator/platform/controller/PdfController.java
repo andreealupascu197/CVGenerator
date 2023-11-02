@@ -18,6 +18,5 @@ public class PdfController {
     @PostMapping("/user/{id}")
     public ResponseEntity<String> generateCv(@PathVariable("id") Long userId) throws DocumentException, IOException {
         return ResponseEntity.ok().body(pdfGeneratorService.generateCv(userId));
-
     }
 }

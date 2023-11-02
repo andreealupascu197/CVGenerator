@@ -35,5 +35,4 @@ public class JobDescriptionController {
         jobDescriptionService.deleteById(id);
         return ResponseEntity.ok().build();
     }
-
 }

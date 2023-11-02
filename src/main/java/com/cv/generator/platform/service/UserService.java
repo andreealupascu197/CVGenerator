@@ -13,5 +13,4 @@ public interface UserService {
     UserDTO add(UserDTO userDTO);
 
     void deleteById(Long id);
-
 }

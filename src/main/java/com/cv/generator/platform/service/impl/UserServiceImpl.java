@@ -18,7 +18,6 @@ public class UserServiceImpl implements UserService {
 
     private UserMapper userMapper;
 
-
     @Override
     public List<UserDTO> getAll() {
         return userMapper.toDTOs(userRepository.findAll());

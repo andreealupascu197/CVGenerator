@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface JobService {
 
-
     List<JobDTO> getAll();
 
     List<JobDTO> getAllByUserId(Long id);

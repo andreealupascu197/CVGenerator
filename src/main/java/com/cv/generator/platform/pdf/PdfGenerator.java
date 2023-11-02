@@ -10,12 +10,10 @@ import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.FontFactory;
 
-import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Chunk;
 import org.springframework.stereotype.Component;
 
 import java.io.FileOutputStream;
@@ -86,7 +84,6 @@ public class PdfGenerator {
             document.add(new Paragraph("Start Date: " + education.getStartDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))));
             document.add(new Paragraph("End Date: " + education.getEndDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"))));
         }
-
         document.close();
     }
 }

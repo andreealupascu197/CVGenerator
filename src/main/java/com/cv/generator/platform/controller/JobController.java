@@ -36,7 +36,4 @@ public class JobController {
         jobService.deleteById(id);
         return ResponseEntity.ok().build();
     }
-
-
-
 }

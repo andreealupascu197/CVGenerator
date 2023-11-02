@@ -14,9 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class UserController {
 
-
     private UserService userService;
-
 
     @GetMapping
     public ResponseEntity<List<UserDTO>> getAll() {
@@ -38,6 +36,4 @@ public class UserController {
         userService.deleteById(id);
         return ResponseEntity.ok().build();
     }
-
-
 }

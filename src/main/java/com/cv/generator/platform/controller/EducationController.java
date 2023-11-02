@@ -16,7 +16,6 @@ public class EducationController {
 
     private EducationService educationService;
 
-
     @GetMapping
     public ResponseEntity<List<EducationDTO>> getAll() {
         return ResponseEntity.ok().body(educationService.getAll());
@@ -25,7 +24,6 @@ public class EducationController {
     @GetMapping("/{id}")
     public ResponseEntity<List<EducationDTO>> getByUserId(@PathVariable("id") Long id) {
         return ResponseEntity.ok().body(educationService.getByUserId(id));
-
     }
 
     @PostMapping
@@ -38,7 +36,4 @@ public class EducationController {
         educationService.deleteById(id);
         return ResponseEntity.ok().build();
     }
-
-
-
 }

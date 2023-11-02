@@ -16,9 +16,8 @@ import java.util.Map;
 @SpringBootApplication
 @EnableJpaRepositories
 public class CvGeneratorApplication {
+
 	private static final Logger log = LoggerFactory.getLogger(CvGeneratorApplication.class);
-
-
 
 	public static void main(String[] args) {
 
@@ -66,7 +65,6 @@ public class CvGeneratorApplication {
 	private static void setDefaultProfile(SpringApplication app) {
 		final String profileProperty = "spring.profiles.default";
 		final Map<String, Object> properties = new HashMap<>();
-//		properties.put(profileProperty, "dev");
 		app.setDefaultProperties(properties);
 	}
 

@@ -36,6 +36,4 @@ public class Job {
     @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "job_description_id", referencedColumnName = "id")
     private JobDescription jobDescription;
-
-
 }

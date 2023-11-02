@@ -1,6 +1,5 @@
 package com.cv.generator.platform.dto;
 
-import com.cv.generator.platform.domain.JobDescription;
 import com.cv.generator.platform.domain.User;
 import lombok.*;
 
