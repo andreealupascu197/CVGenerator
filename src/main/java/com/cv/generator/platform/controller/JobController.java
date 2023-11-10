@@ -1,6 +1,5 @@
 package com.cv.generator.platform.controller;
 
-
 import com.cv.generator.platform.dto.JobDTO;
 import com.cv.generator.platform.service.JobService;
 import lombok.AllArgsConstructor;

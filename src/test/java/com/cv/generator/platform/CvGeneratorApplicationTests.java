@@ -9,5 +9,4 @@ class CvGeneratorApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

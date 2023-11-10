@@ -10,5 +10,3 @@ CREATE TABLE IF NOT EXISTS cd.job (
     job_description_id BIGINT,
     FOREIGN KEY (users_id) REFERENCES cd.users (id)
 );
-
-

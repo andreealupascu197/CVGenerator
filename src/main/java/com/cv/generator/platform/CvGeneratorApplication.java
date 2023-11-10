@@ -19,8 +19,15 @@ public class CvGeneratorApplication {
 
 	private static final Logger log = LoggerFactory.getLogger(CvGeneratorApplication.class);
 
-	public static void main(String[] args) {
+	private static final String CONTEXT_PATH = "server.servlet.context-path";
 
+	private static final String PORT = "server.port";
+
+	private static final String KEY_STORE = "server.ssl.key-store";
+
+	private static final String APPLICATION_NAME = "spring.application.name";
+
+	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(CvGeneratorApplication.class);
 		setDefaultProfile(app);
 		Environment env = app.run(args).getEnvironment();
@@ -29,11 +36,12 @@ public class CvGeneratorApplication {
 
 	private static void logApplicationStartup(Environment env) {
 		String protocol = "http";
-		if (env.getProperty("server.ssl.key-store") != null) {
+		if (env.getProperty(KEY_STORE) != null) {
 			protocol = "https";
 		}
-		String serverPort = env.getProperty("server.port");
-		String contextPath = env.getProperty("server.servlet.context-path");
+		String serverPort = env.getProperty(PORT);
+
+		String contextPath = env.getProperty(CONTEXT_PATH);
 		if (StringUtils.isBlank(contextPath)) {
 			contextPath = "/";
 		}
@@ -51,7 +59,7 @@ public class CvGeneratorApplication {
                 \tExternal: \t{}://{}:{}{}
                 \tProfile(s): \t{}
                 ----------------------------------------------------------""",
-				env.getProperty("spring.application.name"),
+				env.getProperty(APPLICATION_NAME),
 				protocol,
 				serverPort,
 				contextPath,
@@ -63,7 +71,6 @@ public class CvGeneratorApplication {
 	}
 
 	private static void setDefaultProfile(SpringApplication app) {
-		final String profileProperty = "spring.profiles.default";
 		final Map<String, Object> properties = new HashMap<>();
 		app.setDefaultProperties(properties);
 	}

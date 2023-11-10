@@ -13,7 +13,7 @@ import java.io.IOException;
 @RequestMapping("/api/generateCv")
 public class PdfController {
 
- private PdfGeneratorService pdfGeneratorService;
+    private PdfGeneratorService pdfGeneratorService;
 
     @PostMapping("/user/{id}")
     public ResponseEntity<String> generateCv(@PathVariable("id") Long userId) throws DocumentException, IOException {

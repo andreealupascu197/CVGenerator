@@ -1,5 +1,10 @@
 package com.cv.generator.platform.dto;
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
 
 import java.io.Serializable;
 
@@ -12,15 +17,15 @@ public class JobDescriptionDTO implements Serializable {
 
     private Long id;
 
-    private String programmingLanguages;
+    private String programmingLanguage;
 
-    private String frameworks;
+    private String framework;
 
-    private String tools;
+    private String tool;
 
     private String testing;
 
     private String database;
 
-    private String interests;
+    private String interest;
 }

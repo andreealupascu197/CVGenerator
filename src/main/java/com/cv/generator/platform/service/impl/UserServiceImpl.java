@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO getById(Long id) {
-        return userMapper.toDTO(userRepository.findById(id).orElseThrow(()-> new EntityNotFoundException("user")));
+        return userMapper.toDTO(userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("user")));
     }
 
     @Override
@@ -36,6 +36,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deleteById(Long id) {
-    userRepository.deleteById(id);
+        userRepository.deleteById(id);
     }
 }

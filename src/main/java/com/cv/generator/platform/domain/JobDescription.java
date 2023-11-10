@@ -1,7 +1,13 @@
 package com.cv.generator.platform.domain;
 
-
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.CascadeType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,17 +25,17 @@ public class JobDescription {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String programmingLanguages;
+    private String programmingLanguage;
 
-    private String frameworks;
+    private String framework;
 
-    private String tools;
+    private String tool;
 
     private String testing;
 
     private String database;
 
-    private String interests;
+    private String interest;
 
     @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "job_id", referencedColumnName = "id")

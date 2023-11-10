@@ -12,5 +12,3 @@ CREATE TABLE IF NOT EXISTS cd.education (
     end_date DATE,
     FOREIGN KEY (users_id) REFERENCES cd.users (id)
 );
-
-
